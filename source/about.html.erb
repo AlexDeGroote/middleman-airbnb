@@ -5,7 +5,7 @@ title: Le Wagon - Middleman - About
 <div id="about">
   <div class="about-content">
     <h1>This template was built with <i class="fa fa-heart"></i> by</h1>
-    <ul class="list-inline">
+    <!-- <ul class="list-inline">
       <% data.users.each do |user| %>
         <li>
           <% link_to "https://kitt.lewagon.com/alumni/#{user.github_nickname}", target: "_blank" do %>
@@ -18,6 +18,14 @@ title: Le Wagon - Middleman - About
             <% end %>
           </p>
         </li>
+      <% end %>
+    </ul> -->
+    <ul class="list-inline text-center">
+      <% ["alexdegroote"].each do |gh_username| %>
+      <li>
+        <%= image_tag "https://kitt.lewagon.com/placeholder/users/#{gh_username}", class: "img-circle" %>
+        <h3><%= gh_username.capitalize %></h3>
+      </li>
       <% end %>
     </ul>
   </div>
